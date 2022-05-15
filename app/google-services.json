@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "474690181020",
+    "project_id": "arty-7bf8a",
+    "storage_bucket": "arty-7bf8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474690181020:android:0240fd5e0e220195525a59",
+        "android_client_info": {
+          "package_name": "com.artyawn.arty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474690181020-r9e8rqj5lscvkesarpev07657plr2g0o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoBWe84aIJmglbJD0q7gqjzfJBNiQo0x0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474690181020-r9e8rqj5lscvkesarpev07657plr2g0o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

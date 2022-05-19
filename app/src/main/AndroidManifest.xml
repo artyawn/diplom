@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arty">
         <activity
+            android:name=".ListTasks"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".tasksk"
+            android:exported="false" />
+        <activity
+            android:name=".CreateTask"
+            android:exported="false" />
+        <activity
+            android:name=".Tasks"
+            android:exported="false" />
+        <activity
             android:name=".UserActivity"
             android:exported="false" />
         <activity

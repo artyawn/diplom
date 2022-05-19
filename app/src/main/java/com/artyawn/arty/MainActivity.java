@@ -19,7 +19,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
     private Button logout_btn;
     private FirebaseAuth mAuth;
-    private TextView  textViewDate;
+    private TextView  textViewDate, tasks, create_tasks;
     private String email;
     private ImageView usr_icon;
     private String date;
@@ -32,12 +32,31 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         usr_icon = findViewById(R.id.user_icon);
         textViewDate=findViewById(R.id.textViewDate);
+        tasks = findViewById(R.id.tasks);
+        create_tasks = findViewById(R.id.create_tasks);
 
         // Дата
         Date currentDate = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd.MM", Locale.getDefault());
         String dateText = dateFormat.format(currentDate);
         textViewDate.setText(dateText);
+
+        create_tasks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,CreateTask.class);
+                startActivity(intent);
+            }
+        });
+
+        //Переход на задачи
+        tasks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Tasks.class);
+                startActivity(intent);
+            }
+        });
 
 
 //Переход на страницу юзера

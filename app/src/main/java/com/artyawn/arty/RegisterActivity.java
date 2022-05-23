@@ -24,8 +24,8 @@ public class RegisterActivity extends AppCompatActivity {
     private Button btn_register;
 
     private FirebaseAuth mAuth;
-    private DatabaseReference ref;
-    private FirebaseDatabase database;
+    private DatabaseReference myRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,22 +33,24 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance();
-        ref = database.getReference();
 
 
         email_register = findViewById(R.id.email_register);
         password_register = findViewById(R.id.password_register);
         btn_register = findViewById(R.id.btn_register);
 
+
+
+
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (email_register.getText().toString().isEmpty() || password_register.getText().toString().isEmpty()){
                     Toast.makeText(RegisterActivity.this, "Fields cannot be empty", Toast.LENGTH_SHORT).show();
                 }
-                else if (password_register.getText().toString().length()<6){
-                    Toast.makeText(RegisterActivity.this, "Password lenght may be > 6", Toast.LENGTH_SHORT).show();
+                else if (password_register.getText().toString().length() < 6){
+                    Toast.makeText(RegisterActivity.this, "Пароль должен быть больше 6 символов",Toast.LENGTH_SHORT).show();
                 }
                 else{
                     mAuth.createUserWithEmailAndPassword(email_register.getText().toString(), password_register.getText().toString())
@@ -56,6 +58,15 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()){
+                                        String email = email_register.getText().toString();
+                                        String id = mAuth.getUid();
+                                        String password = password_register.getText().toString();
+
+
+
+                                        myRef = FirebaseDatabase.getInstance().getReference("users").child(id).child("user_inf");
+                                        UserClass new_user = new UserClass(id,email,password);
+                                        myRef.setValue(new_user);
                                         Intent intent = new Intent (RegisterActivity.this, MainActivity.class);
                                         startActivity(intent);
                                     }else{

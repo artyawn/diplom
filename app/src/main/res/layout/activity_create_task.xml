@@ -1,26 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".CreateTask">
-    <ListView
-        android:layout_width="match_parent"
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="52dp"
+        android:gravity="center"
+        android:hint="Название задачи"
+        android:textSize="20dp"
+        android:id="@+id/et_new_task"/>
+
+    <EditText
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:id="@+id/discr_for_task"/>
-    <EditText android:layout_width="270dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="20dp"
+        android:hint="Описание"
+        android:textSize="20dp"
+        android:id="@+id/description"/>
+
+    <EditText
+        android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/et_new_tasks"
-        android:layout_toStartOf="@+id/btn_add"/>
-    <Button android:layout_width="70dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginStart="20dp"
+        android:hint="Группа"
+        android:textSize="20dp"
+        android:id="@+id/et_group"/>
+
+    <EditText
+        android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_alignBaseline="@+id/et_new_tasks"
-        android:layout_alignBottom="@+id/et_new_tasks"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/btn_add"
-        android:text="New"/>
+        android:layout_marginTop="330dp"
+        android:layout_marginStart="20dp"
+        android:hint="Исполнитель"
+        android:textSize="20dp"
+        android:id="@+id/worker"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_add_grouper"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="300dp"-->
+<!--        android:layout_marginTop="222dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="добавить"-->
+<!--        android:textSize="15dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="normal"-->
+<!--        android:textAllCaps="false"/>-->
+
+    <Button
+        android:id="@+id/btn_new_task"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/button_add"
+        android:gravity="center"
+        android:text="создать"
+        android:textSize="15dp"
+        android:textStyle="normal"
+        android:textAllCaps="false"/>
 
 
 </RelativeLayout>

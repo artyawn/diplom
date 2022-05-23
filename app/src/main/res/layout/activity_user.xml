@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_new_group"
+        android:layout_marginTop="200dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="130dp"
+        android:text="новая группа"/>
+
+    <Button
+        android:id="@+id/btn_get_id"
+        android:layout_width="130dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/button_add"
+        android:gravity="center"
+        android:text="получить id"
+        android:textSize="15dp"
+        android:textStyle="normal"
+        android:textAllCaps="false"/>
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:textColor="@color/hint"
+        android:textSize="15dp" />
+
+
+</RelativeLayout>

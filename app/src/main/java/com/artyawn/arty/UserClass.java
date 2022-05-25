@@ -1,11 +1,19 @@
 package com.artyawn.arty;
 
 public class UserClass {
-    public String email, password, id;
+    public String email, id;
     public UserClass(){}
-    public UserClass(String id, String email, String password){
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public UserClass(String id, String email){
         this.id = id;
         this.email= email;
-        this.password = password;
     }
 }

@@ -16,6 +16,16 @@
         android:layout_marginStart="130dp"
         android:text="новая группа"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_groups"
+        android:layout_marginTop="250dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="130dp"
+        android:text="мои группы"/>
+
     <Button
         android:id="@+id/btn_get_id"
         android:layout_width="130dp"

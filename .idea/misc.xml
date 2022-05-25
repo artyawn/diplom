@@ -8,11 +8,15 @@
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_main2.xml" value="0.14010416666666667" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_new_group.xml" value="0.264" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_my_groups.xml" value="0.15942028985507245" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_new_group.xml" value="0.176" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_new_group2.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_recycle_groups.xml" value="0.1" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_register.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_tasks.xml" value="0.1" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_user.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_user.xml" value="0.176" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/item.xml" value="0.176" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/recucle_task.xml" value="0.18020833333333333" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/task11.xml" value="0.14010416666666667" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/task_layout.xml" value="0.18020833333333333" />
       </map>

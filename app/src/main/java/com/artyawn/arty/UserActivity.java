@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class UserActivity extends AppCompatActivity {
 
-    private TextView create_new_group, id;
+    private TextView create_new_group, id, my_groups;
     private Button btn_get_id;
     private FirebaseAuth mAuth;
 
@@ -26,6 +26,7 @@ public class UserActivity extends AppCompatActivity {
         create_new_group=findViewById(R.id.tv_new_group);
         btn_get_id = findViewById(R.id.btn_get_id);
         id = findViewById(R.id.et_id);
+        my_groups = findViewById(R.id.my_groups);
         mAuth = FirebaseAuth.getInstance();
         String user = mAuth.getUid();
 
@@ -44,6 +45,14 @@ public class UserActivity extends AppCompatActivity {
             public void onClick(View view) {
                 id.setText(user);
 
+            }
+        });
+
+        my_groups.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UserActivity.this, MyGroupsActivity.class);
+                startActivity(intent);
             }
         });
 

@@ -1,24 +1,36 @@
 package com.artyawn.arty;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class NewGroup extends AppCompatActivity {
     private DatabaseReference myRef;
-    FirebaseDatabase database;
     private Button create_group;
     private EditText grouper, name_new_group;
     private TextView add_grouper;
+
+    RecyclerView recyclerView;
+    MyAdapter myAdapter;
+    ArrayList<UserClass> list;
+    FirebaseAuth mAuth;
+
 
 
 
@@ -30,42 +42,56 @@ public class NewGroup extends AppCompatActivity {
         create_group = findViewById(R.id.create_new_group);
         grouper = findViewById(R.id.grouper);
         name_new_group = findViewById(R.id.name_of_new_group);
-        add_grouper= findViewById(R.id.tv_add_grouper);
+        add_grouper = findViewById(R.id.tv_add_grouper);
+        recyclerView = findViewById(R.id.userList);
 
+        mAuth = FirebaseAuth.getInstance();
 
-        add_grouper.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                if(uid.isEmpty()){
-//                    Toast.makeText(NewGroup.this, "введите id", Toast.LENGTH_SHORT).show();
-//                }
-//                else{
-                    String uid = grouper.getText().toString()+"/";
-                    String title = name_new_group.getText().toString();
-                    String path = "users/"+ uid +"groups/" + title;
-                    myRef = FirebaseDatabase.getInstance().getReference(path);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        list = new ArrayList<>();
+        myAdapter = new MyAdapter(this,list);
+        recyclerView.setAdapter(myAdapter);
 
 
 
-                    GroupClass new_group = new GroupClass(title,uid);
-                    myRef.setValue(new_group);
+
+        add_grouper.setOnClickListener(view -> {
+            String id = grouper.getText().toString();
+            myRef = FirebaseDatabase.getInstance().getReference("Users").child(id).child("user_inf");
+
+            myRef.addValueEventListener(new ValueEventListener() {
+                @SuppressLint("NotifyDataSetChanged")
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+
+                        UserClass user = dataSnapshot.getValue(UserClass.class);
+                        list.add(user);
 
 
-//                }
+                    }
+                    myAdapter.notifyDataSetChanged();
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
 
 
-            }
         });
 
-        create_group.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String uid = grouper.getText().toString();
-                String title = name_new_group.getText().toString();
-                myRef = FirebaseDatabase.getInstance().getReference("groups").child(title);
-                GroupClass group = new GroupClass(title,uid);
-                myRef.setValue(group);
-            }
+        create_group.setOnClickListener(view -> {
+            String uid = grouper.getText().toString();
+            String title = name_new_group.getText().toString();
+            myRef = FirebaseDatabase.getInstance().getReference("groups").child(title);
+            GroupClass group = new GroupClass(title,uid);
+            myRef.setValue(group);
         });
 
     }

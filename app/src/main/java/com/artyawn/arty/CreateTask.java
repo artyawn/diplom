@@ -45,52 +45,24 @@ public class CreateTask extends AppCompatActivity {
         et_group = findViewById(R.id.et_group);
         btn_new_task = findViewById(R.id.btn_new_task);
 
-        btn_new_task.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String new_task =et_new_task.getText().toString();
-                String worker = et_worker.getText().toString();
-                String description =et_description.getText().toString();
-                String group = et_group.getText().toString();
-                if(new_task.isEmpty() ||worker.isEmpty() ||description.isEmpty() ||group.isEmpty()){
-                    Toast.makeText(CreateTask.this, "Введены не все данные", Toast.LENGTH_SHORT).show();
+        btn_new_task.setOnClickListener(view -> {
+            String new_task =et_new_task.getText().toString();
+            String worker = et_worker.getText().toString();
+            String description =et_description.getText().toString();
+            String group = et_group.getText().toString();
+            if(new_task.isEmpty() ||worker.isEmpty() ||description.isEmpty() ||group.isEmpty()){
+                Toast.makeText(CreateTask.this, "Введены не все данные", Toast.LENGTH_SHORT).show();
 
-                }
-                else {
-                    myRef = FirebaseDatabase.getInstance().getReference("users/"+worker+"/"+"tasks");
-                    CreateTaskClass task = new CreateTaskClass(new_task,group,worker,description);
-                    myRef.setValue(task);
-                }
+            }
+            else {
+                myRef = FirebaseDatabase.getInstance().getReference("users/"+worker+"/"+"tasks/"+new_task+"/");
+                CreateTaskClass task = new CreateTaskClass(new_task,group,worker,description);
+                myRef.setValue(task);
             }
         });
 
 
-//        ListUserTasks = (ListView) findViewById(R.id.discr_for_task);
-//        myRef = FirebaseDatabase.getInstance().getReference();
 
-//        FirebaseListOptions<String> options = new FirebaseListOptions.Builder<String>()
-//                .setQuery(myRef.child(user.getUid()).child("Tasks"),String.class)
-//                .setLayout(android.R.layout.simple_list_item_1)
-//                .build();
-//
-//
-//        mAdapter = new FirebaseListAdapter<String>(options) {
-//            @Override
-//            protected void populateView(@NonNull View v, @NonNull String s, int position) {
-//                TextView text = (TextView) v.findViewById(android.R.id.text1);
-//                text.setText(s);
-//            }
-//        };
-//        ListUserTasks.setAdapter(mAdapter);
-//        btn_new_task = findViewById(R.id.btn_add);
-//        et_new_task = findViewById(R.id.et_new_tasks);
-//
-//        btn_new_task.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                myRef.child(user.getUid()).child("Tasks").push().setValue(et_new_task.getText().toString());
-//            }
-//        });
     }
 }
 

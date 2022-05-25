@@ -65,7 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
                                         myRef = FirebaseDatabase.getInstance().getReference("users").child(id).child("user_inf");
-                                        UserClass new_user = new UserClass(id,email,password);
+                                        UserClass new_user = new UserClass(id,email);
                                         myRef.setValue(new_user);
                                         Intent intent = new Intent (RegisterActivity.this, MainActivity.class);
                                         startActivity(intent);

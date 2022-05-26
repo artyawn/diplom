@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arty">
         <activity
+            android:name=".MatesTasksActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecycleGroups"
             android:exported="false" />
         <activity
             android:name=".MyGroupsActivity"
             android:exported="false" />
         <activity
-            android:name=".NewGroup"
+            android:name=".CreateGroup.NewGroup"
             android:exported="false" />
         <activity
             android:name=".ListTasks"
@@ -28,7 +31,7 @@
             android:name=".tasksk"
             android:exported="false" />
         <activity
-            android:name=".CreateTask"
+            android:name=".ActivityTask.CreateTask"
             android:exported="false" />
         <activity
             android:name=".ActivityTask.Tasks"

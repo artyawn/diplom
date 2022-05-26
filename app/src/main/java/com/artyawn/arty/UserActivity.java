@@ -8,9 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.artyawn.arty.CreateGroup.NewGroup;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -35,7 +34,7 @@ public class UserActivity extends AppCompatActivity {
         create_new_group.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserActivity.this,NewGroup.class);
+                Intent intent = new Intent(UserActivity.this, NewGroup.class);
                 startActivity(intent);
             }
         });

@@ -16,4 +16,7 @@ public class UserClass {
         this.id = id;
         this.email= email;
     }
+    public UserClass( String email){
+        this.email= email;
+    }
 }

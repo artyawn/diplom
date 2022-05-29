@@ -10,43 +10,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arty">
         <activity
-            android:name=".MatesTasksActivity"
+            android:name=".MatesGroupsActivity"
             android:exported="false" />
         <activity
-            android:name=".RecycleGroups"
-            android:exported="false" />
+            android:name=".MatesTasksActivity"
+            android:exported="true" />
         <activity
             android:name=".MyGroupsActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CreateGroup.NewGroup"
-            android:exported="false" />
-        <activity
-            android:name=".ListTasks"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".tasksk"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ActivityTask.CreateTask"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ActivityTask.Tasks"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".UserActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".FirstActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

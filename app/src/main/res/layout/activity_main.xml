@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".LoginActivity">
 
 
@@ -57,7 +58,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="319dp"
         android:layout_marginTop="25dp"
-        android:background="@drawable/user" />
+        android:background="@drawable/user_icon" />
 
     <Button
         android:id="@+id/btn_logout"

@@ -3,6 +3,7 @@ package com.artyawn.arty.ActivityTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,9 +13,13 @@ import com.artyawn.arty.CreateTaskClass;
 import com.artyawn.arty.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class TaskAdapter extends FirebaseRecyclerAdapter<CreateTaskClass, TaskAdapter.MyViewHolder> {
 
+    FirebaseAuth auth;
     public TaskAdapter(
             @NonNull FirebaseRecyclerOptions<CreateTaskClass> options)
     {
@@ -35,9 +40,7 @@ public class TaskAdapter extends FirebaseRecyclerAdapter<CreateTaskClass, TaskAd
 
     @NonNull
     @Override
-    public MyViewHolder
-    onCreateViewHolder(@NonNull ViewGroup parent,
-                       int viewType)
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recucle_task, parent, false);
         return new TaskAdapter.MyViewHolder(view);
@@ -47,6 +50,7 @@ public class TaskAdapter extends FirebaseRecyclerAdapter<CreateTaskClass, TaskAd
             public static class MyViewHolder extends RecyclerView.ViewHolder{
 
             TextView title, description, worker,group ;
+            Button btn_recycle;
 
 
             public MyViewHolder(@NonNull View itemView) {
@@ -55,6 +59,9 @@ public class TaskAdapter extends FirebaseRecyclerAdapter<CreateTaskClass, TaskAd
                 description = itemView.findViewById(R.id.tv_description);
                 worker = itemView.findViewById(R.id.tv_worker);
                 group = itemView.findViewById(R.id.tv_group);
+                btn_recycle = itemView.findViewById(R.id.btn_recycle);
+
+
             }
         }
         }

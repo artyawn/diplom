@@ -4,11 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 import com.artyawn.arty.ActivityTask.TaskAdapter;
 import com.artyawn.arty.CreateTaskClass;
+import com.artyawn.arty.FirstActivity;
+import com.artyawn.arty.MatesTasksActivity;
 import com.artyawn.arty.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,13 +27,16 @@ private RecyclerView recyclerView;
         TaskAdapter adapter;
         DatabaseReference myRef;
         String mAuth;
+        TextView tasks_mates;
+        ImageView btn_back;
 
 @Override
 protected void onCreate(Bundle savedInstanceState)
         {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tasks);
-
+        tasks_mates = findViewById(R.id.tasks_mates);
+        btn_back = findViewById(R.id.back_btn);
 
         mAuth = FirebaseAuth.getInstance().getUid();
         myRef = FirebaseDatabase.getInstance().getReference().child("users").child(mAuth).child("tasks");
@@ -45,6 +54,19 @@ protected void onCreate(Bundle savedInstanceState)
 
         adapter = new TaskAdapter(options);
         recyclerView.setAdapter(adapter);
+
+        tasks_mates.setOnClickListener(view -> {
+                Intent intent = new Intent(Tasks.this, MatesTasksActivity.class);
+                startActivity(intent);
+        });
+
+                btn_back.setOnClickListener(view -> {
+                        Intent intent = new Intent(Tasks.this, FirstActivity.class);
+                        startActivity(intent);
+                });
+
+
+
         }
 
 
@@ -63,59 +85,3 @@ protected void onCreate(Bundle savedInstanceState)
         }
 
 
-
-
-
-//Старый класс
-
-//public class Tasks extends AppCompatActivity {
-//
-//
-//    private RecyclerView recyclerView;
-//    DatabaseReference database;
-//    TaskAdapter myAdapter;
-//    ArrayList<CreateTaskClass> list;
-//    FirebaseAuth mAuth;
-//
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_tasks);
-//
-//
-//        recyclerView = findViewById(R.id.userList);
-//        String id = FirebaseAuth.getInstance().getUid();
-//        assert id != null;
-//        database = FirebaseDatabase.getInstance().getReference("users").child(id).child("tasks");
-//        recyclerView.setHasFixedSize(true);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//
-//
-//        list = new ArrayList<>();
-//        myAdapter = new TaskAdapter(this,list);
-//        recyclerView.setAdapter(myAdapter);
-//
-//        database.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-//
-//                    CreateTaskClass task = dataSnapshot.getValue(CreateTaskClass.class);
-//                    list.add(task);
-//
-//
-//                }
-//                myAdapter.notifyDataSetChanged();
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-//
-//    }
-//}

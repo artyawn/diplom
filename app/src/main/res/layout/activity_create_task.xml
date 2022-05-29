@@ -2,72 +2,86 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ActivityTask.CreateTask">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
     <EditText
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
-        android:layout_marginStart="52dp"
+        android:layout_centerHorizontal="true"
         android:gravity="center"
         android:hint="Название задачи"
         android:textSize="20dp"
+        android:fontFamily="@font/roboto_light"
         android:id="@+id/et_new_task"/>
 
     <EditText
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/et_new_task"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_light"
         android:hint="Описание"
         android:textSize="20dp"
         android:id="@+id/description"/>
 
     <EditText
-        android:layout_width="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginTop="270dp"
         android:layout_marginStart="20dp"
-
+        android:fontFamily="@font/roboto_light"
         android:hint="Группа"
         android:textSize="20dp"
         android:id="@+id/et_group"/>
 
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="330dp"
-        android:layout_marginStart="20dp"
-        android:hint="Исполнитель"
-        android:textSize="20dp"
-        android:id="@+id/worker"/>
+            <EditText
+                android:id="@+id/worker"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="330dp"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Исполнитель"
+                android:textSize="20dp" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/tv_add_grouper"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="300dp"-->
-<!--        android:layout_marginTop="222dp"-->
-<!--        android:gravity="center"-->
-<!--        android:text="добавить"-->
-<!--        android:textSize="15dp"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textStyle="normal"-->
-<!--        android:textAllCaps="false"/>-->
 
-    <Button
-        android:id="@+id/btn_new_task"
-        android:layout_width="110dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="500dp"
-        android:background="@drawable/button_add"
-        android:gravity="center"
-        android:text="создать"
-        android:textSize="15dp"
-        android:textStyle="normal"
-        android:textAllCaps="false"/>
 
+            <ImageButton
+                android:id="@+id/btn_new_task"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="143dp"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/create"
+                android:layout_centerHorizontal="true"
+                android:text="создать"
+                android:textAllCaps="false"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

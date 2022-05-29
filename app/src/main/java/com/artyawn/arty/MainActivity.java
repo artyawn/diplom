@@ -30,11 +30,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         logout_btn = findViewById(R.id.btn_logout);
         mAuth = FirebaseAuth.getInstance();
         usr_icon = findViewById(R.id.user_icon);
         textViewDate=findViewById(R.id.textViewDate);
-        tasks = findViewById(R.id.tasks);
+        tasks = findViewById(R.id.tasks_main);
         create_tasks = findViewById(R.id.create_tasks);
         tasks_for_mates = findViewById(R.id.tasks_for_mates);
 
@@ -69,11 +70,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-//Выход из аккаунта
-        logout_btn.setOnClickListener(v -> {
-            mAuth.signOut();
-            Intent intent = new Intent (MainActivity.this, LoginActivity.class);
-            startActivity(intent);
-        });
+
     }
 }

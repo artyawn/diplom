@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
     private EditText email_login;
     private EditText password_login;
-    private Button btn_login;
+    private ImageButton btn_login;
     private TextView register_txt;
 
     private FirebaseAuth mAuth;
@@ -30,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
 
         email_login = findViewById(R.id.email_login);
         password_login = findViewById(R.id.password_login);
@@ -40,11 +42,11 @@ public class LoginActivity extends AppCompatActivity {
 
 
 //Проверка юзера на вход
-        FirebaseUser user = mAuth.getCurrentUser();
-        if(user !=null){
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(intent);
-        }
+//        FirebaseUser user = mAuth.getCurrentUser();
+//        if(user !=null){
+//            Intent intent = new Intent(LoginActivity.this, FirstActivity.class);
+//            startActivity(intent);
+//        }
 
 //Переход на страницу регистрации
         register_txt.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()){
-                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                        Intent intent = new Intent(LoginActivity.this, FirstActivity.class);
                                         startActivity(intent);
                                     }else{
                                         Toast.makeText(LoginActivity.this, "You have some errors", Toast.LENGTH_SHORT).show();

@@ -4,48 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".UserActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_new_group"
-        android:layout_marginTop="200dp"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_marginStart="130dp"
-        android:text="новая группа"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/my_groups"
-        android:layout_marginTop="250dp"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_marginStart="130dp"
-        android:text="мои группы"/>
-
-    <Button
-        android:id="@+id/btn_get_id"
-        android:layout_width="130dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="500dp"
-        android:background="@drawable/button_add"
-        android:gravity="center"
-        android:text="получить id"
-        android:textSize="15dp"
-        android:textStyle="normal"
-        android:textAllCaps="false"/>
-
-    <EditText
-        android:id="@+id/et_id"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
-        android:textColor="@color/hint"
-        android:textSize="15dp" />
+        android:layout_height="650dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Сменить данные"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:fontFamily="@font/roboto_light"
+                android:id="@+id/et_change_data"/>
+
+
+            <TextView
+                android:id="@+id/tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_change_data"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto_light"
+                android:text="Получить ID"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+            <ImageView
+                android:id="@+id/btn_get_id"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/copy"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_id"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <EditText
+                android:id="@+id/et_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_id"
+                android:layout_marginTop="20dp"
+               android:layout_marginStart="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:text="J30rtVpPPiaabQEhHLh1oUeHgo53"/>
+
+
+            <ImageButton
+                android:id="@+id/logout_btn"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="143dp"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/logout"
+                android:layout_centerHorizontal="true"
+                android:text="создать"
+                android:textAllCaps="false"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_get_id"-->
+<!--        android:layout_width="130dp"-->
+<!--        android:layout_height="38dp"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginTop="500dp"-->
+<!--        android:background="@drawable/button_add"-->
+<!--        android:gravity="center"-->
+<!--        android:text="получить id"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textSize="15dp"-->
+<!--        android:textStyle="normal" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/et_id"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="600dp"-->
+<!--        android:textColor="@color/hint"-->
+<!--        android:textSize="15dp" />-->
 
 
 </RelativeLayout>

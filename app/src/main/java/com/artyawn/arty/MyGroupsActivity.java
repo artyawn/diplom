@@ -4,11 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.artyawn.arty.CreateGroup.NewGroup;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -21,51 +26,34 @@ import java.util.ArrayList;
 
 public class MyGroupsActivity extends AppCompatActivity {
 
-    ListView groupsListView;
-    ArrayList<String> arrayList = new ArrayList<String>();
-    DatabaseReference myRef;
-    FirebaseAuth mAuth;
+   ImageView back;
+   TextView mates_gr;
+   ImageButton new_gr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_groups);
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(MyGroupsActivity.this, android.R.layout.simple_list_item_1,arrayList);
-        mAuth = FirebaseAuth.getInstance();
-        String id = mAuth.getUid();
-        groupsListView =(ListView) findViewById(R.id.groups_listView);
-        groupsListView.setAdapter(arrayAdapter);
-        myRef = FirebaseDatabase.getInstance().getReference("users").child(id).child("groups");
+        back = findViewById(R.id.back_btn);
+        new_gr = findViewById(R.id.cr_new_gr);
+        mates_gr = findViewById(R.id.groups_mates);
+
+        new_gr.setOnClickListener(view -> {
+            Intent intent = new Intent(MyGroupsActivity.this, NewGroup.class);
+            startActivity(intent);
+        });
 
 
-        myRef.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-             String value = snapshot.getValue(String.class);
-              arrayList.add(value);
-              arrayAdapter.notifyDataSetChanged();
-            }
+        back.setOnClickListener(view -> {
+            Intent intent = new Intent(MyGroupsActivity.this, FirstActivity.class);
+            startActivity(intent);
+        });
 
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                arrayAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
+        mates_gr.setOnClickListener(view -> {
+            Intent intent = new Intent(MyGroupsActivity.this, MatesGroupsActivity.class);
+            startActivity(intent);
         });
     }
 }
+

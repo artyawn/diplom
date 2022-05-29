@@ -3,62 +3,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background"
     tools:context=".CreateGroup.NewGroup">
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="52dp"
-        android:gravity="center"
-        android:hint="Название группы"
-        android:textSize="20dp"
-        android:id="@+id/name_of_new_group"/>
-
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginStart="20dp"
-        android:hint="Участник"
-        android:textSize="20dp"
-        android:id="@+id/grouper"/>
-
-    <TextView
-        android:id="@+id/tv_add_grouper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="222dp"
-        android:gravity="center"
-        android:text="добавить"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:textStyle="normal"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/create_new_group"
-        android:layout_width="110dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="550dp"
-        android:background="@drawable/button_add"
-        android:gravity="center"
-        android:text="создать"
-        android:textAllCaps="false"
-        android:textSize="15dp"
-        android:textStyle="normal" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/userList"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="260dp"
-        android:layout_marginBottom="200dp"/>
+        android:layout_height="650dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:hint="Название группы"
+                android:textSize="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:id="@+id/et_new_group"/>
+            <ImageView
+                android:id="@+id/plus_grouper"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_below="@id/et_new_group"
+                android:background="@drawable/plus"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="24dp"/>
 
 
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/et_new_group"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/roboto_light"
+                android:hint="Участник"
+                android:textSize="14dp"
+                android:id="@+id/grouper_id"/>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/grouperList"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_below="@id/grouper_id"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_new_task"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="143dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/create"
+                android:layout_below="@id/grouperList"
+                android:layout_centerHorizontal="true"
+                android:text="создать"
+                android:textAllCaps="false"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient_background"
-    tools:context=".MyGroupsActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MatesGroupsActivity">
 
     <ImageView
-        android:id="@+id/back_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
@@ -20,14 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Админ"
-        android:textSize="25sp"
+        android:textSize="18sp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="90dp"
-        android:textColor="@color/white"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/white_hint"
         android:fontFamily="@font/roboto_light"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/groupsList"
+        android:id="@+id/matesGroupsList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/my_groups"
@@ -36,27 +35,14 @@
         android:layout_marginEnd="16dp"
         />
     <TextView
-        android:id="@+id/groups_mates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Участник"
-        android:textColor="@color/white_hint"
+        android:textColor="@color/white"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="100dp"
-        android:textSize="18dp"
+        android:layout_marginTop="90dp"
+        android:textSize="25sp"
         android:fontFamily="@font/roboto_light"/>
-    <ImageButton
-        android:id="@+id/cr_new_gr"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/add_new"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="16dp"
-        android:layout_below="@id/my_groups"
-        android:layout_marginTop="490dp"/>
-
-
-
 
 </RelativeLayout>

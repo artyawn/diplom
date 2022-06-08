@@ -24,8 +24,7 @@ public class CreateGroupAdapter extends RecyclerView.Adapter<HolderGrouper>{
     @Override
     public HolderGrouper onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.creat_group_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.creat_group_item,parent,false);
         return new HolderGrouper(view).linkAdapter(this);
     }
 

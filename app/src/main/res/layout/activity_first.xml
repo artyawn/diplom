@@ -21,7 +21,6 @@
         android:fontFamily="@font/roboto_light"
         />
 
-
     <ImageView
         android:id="@+id/usr_ic"
         android:layout_alignParentRight="true"
@@ -32,10 +31,14 @@
         android:layout_marginTop="62dp"
         android:background="@drawable/user_icon" />
 
+
+
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/tasks_main"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="280dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
@@ -45,28 +48,51 @@
         app:cardCornerRadius="12dp"
         app:cardElevation="12dp"
         tools:ignore="MissingConstraints">
+
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
         //color
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_tasks"/>
+            android:background="@drawable/gradient_tasks"
+            />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="16dp">
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
 
             <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tasks"
                 android:text="Задачи"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/roboto_light"
                 android:textSize="25dp"
                 android:textColor="@color/white"/>
 
+            <ListView
+                android:id="@+id/listViewCard"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="270dp"
+                android:layout_height="190dp"/>
         </LinearLayout>
+
+
+        </RelativeLayout>
+
 
     </androidx.cardview.widget.CardView>
 

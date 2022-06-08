@@ -11,24 +11,32 @@
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_create_task.xml" value="0.264" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_first.xml" value="0.2" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_list_tasks2.xml" value="0.14010416666666667" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_login.xml" value="0.4" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_main2.xml" value="0.14010416666666667" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_mates_groups.xml" value="0.16077898550724637" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_mates_groups.xml" value="0.264" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_mates_tasks.xml" value="0.18020833333333333" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_my_groups.xml" value="0.2" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_new_group.xml" value="0.2" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_my_groups.xml" value="0.264" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_new_group.xml" value="0.264" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_new_group2.xml" value="0.18020833333333333" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_recycle_groups.xml" value="0.1" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_register.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_tasks.xml" value="0.2" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_user.xml" value="0.264" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_tasks.xml" value="0.264" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/activity_user.xml" value="0.2" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/card_for_picker.xml" value="0.264" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/creat_group_item.xml" value="0.264" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/item.xml" value="0.176" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/recucle_task.xml" value="0.2" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/group_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/item.xml" value="0.264" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/my_group_recycler.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/password.xml" value="0.264" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/recucle_task.xml" value="0.264" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/recycle_task_for.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/stats.xml" value="0.264" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/stats_admin.xml" value="0.264" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/task11.xml" value="0.14010416666666667" />
         <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/task_layout.xml" value="0.18020833333333333" />
-        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/tasks_for_mates.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/task_to.xml" value="0.1" />
+        <entry key="..\:/Users/artem/AndroidStudioProjects/arty/app/src/main/res/layout/tasks_for_mates.xml" value="0.2" />
       </map>
     </option>
   </component>

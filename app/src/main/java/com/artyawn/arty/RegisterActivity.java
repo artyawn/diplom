@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,7 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText email_register;
     private EditText password_register;
-    private Button btn_register;
+    private ImageButton btn_register;
 
     private FirebaseAuth mAuth;
     private DatabaseReference myRef;
@@ -67,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         myRef = FirebaseDatabase.getInstance().getReference("users").child(id).child("user_inf");
                                         UserClass new_user = new UserClass(id,email);
                                         myRef.setValue(new_user);
-                                        Intent intent = new Intent (RegisterActivity.this, MainActivity.class);
+                                        Intent intent = new Intent (RegisterActivity.this, FirstActivity.class);
                                         startActivity(intent);
                                     }else{
                                         Toast.makeText(RegisterActivity.this, "You have some errors", Toast.LENGTH_SHORT).show();

@@ -2,6 +2,8 @@ package com.artyawn.arty;
 
 public class UserClass {
     public String email, id;
+
+
     public UserClass(){}
 
     public String getEmail() {
@@ -16,7 +18,7 @@ public class UserClass {
         this.id = id;
         this.email= email;
     }
-    public UserClass( String email){
+    public UserClass(String email){
         this.email= email;
     }
 }

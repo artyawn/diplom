@@ -13,7 +13,7 @@
             android:name=".MatesGroupsActivity"
             android:exported="false" />
         <activity
-            android:name=".MatesTasksActivity"
+            android:name=".ActivityTaskFor.MatesTasksActivity"
             android:exported="true" />
         <activity
             android:name=".MyGroupsActivity"
@@ -22,7 +22,7 @@
             android:name=".CreateGroup.NewGroup"
             android:exported="true" />
         <activity
-            android:name=".ActivityTask.CreateTask"
+            android:name=".CreateTask"
             android:exported="true" />
         <activity
             android:name=".ActivityTask.Tasks"
@@ -31,13 +31,13 @@
             android:name=".UserActivity"
             android:exported="true" />
         <activity
+            android:name=".FirstActivity"
+            android:exported="true" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".FirstActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

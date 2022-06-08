@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".ActivityTask.Tasks">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_btn"/>
+
+    <TextView
+        android:id="@+id/my_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Участник"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_light"/>
+
+
+    <TextView
+        android:id="@+id/stats_mates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Админ"
+        android:textColor="@color/white_hint"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="100dp"
+        android:textSize="25dp"
+        android:fontFamily="@font/roboto_light"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stats_mates"
+        app:cardCornerRadius="12dp"
+        android:elevation="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tasks_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Заданий выдано"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                />
+            <TextView
+                android:id="@+id/stat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textColor="#E05777"
+                android:layout_marginStart="350dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="35dp"
+                android:layout_marginTop="16dp"/>
+            <LinearLayout
+                android:id="@+id/ll_activ_group"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stat1"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="Самая активная группа"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/stat2"
+                android:layout_below="@id/stat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:text="ItCompany"
+                android:textColor="#E05777"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="25dp"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/join_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Создано групп"
+                android:layout_below="@id/ll_activ_group"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                />
+
+            <TextView
+                android:id="@+id/stat3"
+                android:layout_below="@id/ll_activ_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:layout_marginStart="350dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="35dp"
+                android:textColor="#E05777"
+                android:layout_marginTop="16dp"/>
+
+
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:id="@+id/ll_activ_grouper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stat3"
+                android:text="Самый активный участник"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/stat4"
+                android:layout_below="@id/ll_activ_grouper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dmitry1998@gmail.com"
+               android:layout_marginStart="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="#E05777"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

@@ -1,36 +1,25 @@
 package com.artyawn.arty;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GroupClass {
     public String title;
-    public String grouper;
-    public ArrayList<String> mates;
-    public GroupClass(){}
+    public List<String> items;
 
     public String getTitle() {
         return title;
     }
 
-    public String getGrouper() {
-        return grouper;
+    public List<String> getItems() {
+        return items;
     }
 
-    public GroupClass(String title, String grouper){
+    public GroupClass(String title, List<String> items){
         this.title = title;
-        this.grouper = grouper;
-
-    }
-    public GroupClass(String title){
-        this.title = title;
-
-
-    }
-    public GroupClass(String title,ArrayList<String> mates){
-        this.title = title;
-        this.mates = mates;
-
-
+        this.items = items;
     }
 
 }
+
+

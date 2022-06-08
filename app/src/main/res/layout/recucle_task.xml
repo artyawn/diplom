@@ -4,45 +4,74 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="12dp"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="8dp"
+    android:layout_margin="16dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/title_task"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp"
-                android:text="title"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_medium"
-                android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/title_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Билеты в кино"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_task"
+            android:text="Дата"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_task"
+            android:layout_marginStart="65dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="22.05.2022"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
 
             <TextView
                 android:id="@+id/title_descr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/title_task"
+                android:layout_below="@id/date"
                 android:text="Описание"
+                android:layout_marginTop="8dp"
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/roboto_medium"
                 android:textColor="@color/black"
                 android:textSize="20sp"/>
 
 
-            <TextView
-                android:id="@+id/tv_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="123"
-                android:layout_below="@id/title_descr"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_light"
-                android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_descr"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Купить 5 билетов в Луну. На 12:30"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/sender_title"
@@ -56,15 +85,16 @@
                 android:fontFamily="@font/roboto_medium" />
 
             <TextView
-                android:id="@+id/tv_worker"
+                android:id="@+id/tv_sender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sender_title"
                 android:layout_marginStart="8dp"
-                android:text="123"
+                android:text="artem.danilin1999@mail.ru"
                 android:fontFamily="@font/roboto_light"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+
 
 
 
@@ -78,26 +108,41 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:fontFamily="@font/roboto_medium"
-                android:layout_below="@id/tv_worker"/>
+                android:layout_below="@id/tv_sender"/>
 
             <TextView
                 android:id="@+id/tv_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="123"
+                android:text="Друзья"
                 android:layout_below="@id/group_title"
                 android:textColor="@color/black"
                 android:fontFamily="@font/roboto_light"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:paddingBottom="10dp"/>
+        <TextView
+            android:id="@+id/sender_id"
+            android:layout_marginTop="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Друзья"
+            android:layout_below="@id/tv_group"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="3sp" />
 
         <Button
-            android:id="@+id/btn_recycle"
-            android:layout_width="50dp"
+            android:id="@+id/done"
+            android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="8dp" />
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/tick"
+            app:strokeColor="#000000" />
+
 
     </RelativeLayout>
 

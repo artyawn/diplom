@@ -3,32 +3,38 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="8dp"
+    app:cardElevation="12dp"
     app:cardCornerRadius="8dp"
-    android:layout_margin="16dp"
-    >
-
-
+    android:layout_margin="16dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Не выполнено"
+            android:textColor="@color/purple_500"
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/title_task"
+            android:layout_below="@id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Верстка страниц"
+            android:text="Билеты в кино"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
-
         <TextView
-            android:id="@+id/title_date"
+            android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/title_task"
@@ -40,16 +46,16 @@
             android:textSize="20sp"/>
 
         <TextView
+            android:id="@+id/tv_date"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/title_task"
-           android:layout_marginTop="20dp"
             android:layout_marginStart="65dp"
-            android:text="24.05.2022"
             android:fontFamily="@font/roboto_light"
-            android:textSize="20dp"
-            android:textColor="@color/black"/>
-
+            android:text="22.05.2022"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
 
 
@@ -57,7 +63,7 @@
             android:id="@+id/title_descr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/title_date"
+            android:layout_below="@id/date"
             android:text="Описание"
             android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"
@@ -73,7 +79,7 @@
             android:layout_below="@id/title_descr"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_light"
-            android:text="Отверстать страницу регистрации и авторизации. Добавить реализации кнопок и анимацию перехода."
+            android:text="Купить 5 билетов в Луну. На 12:30"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
@@ -89,16 +95,30 @@
             android:fontFamily="@font/roboto_medium" />
 
         <TextView
-            android:id="@+id/tv_ispolnit"
+            android:id="@+id/tv_worker_mate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/sender_title"
             android:layout_marginStart="8dp"
-            android:text="dmitry1998@gmail.com"
+            android:text="artem.danilin1999@mail.ru"
             android:fontFamily="@font/roboto_light"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/worker_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_group"
+            android:text="Описание"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/white"
+            android:textSize="3sp"/>
+
+
+
+
         <TextView
             android:id="@+id/group_title"
             android:layout_width="wrap_content"
@@ -106,68 +126,49 @@
             android:text="Группа"
             android:layout_marginStart="8dp"
             android:textColor="@color/black"
-            android:layout_below="@id/tv_ispolnit"
             android:textSize="20sp"
-            android:fontFamily="@font/roboto_medium" />
+            android:fontFamily="@font/roboto_medium"
+            android:layout_below="@id/tv_worker_mate"/>
 
         <TextView
-            android:id="@+id/tv_worker"
+            android:id="@+id/tv_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/group_title"
             android:layout_marginStart="8dp"
-            android:text="ItCompany"
-            android:fontFamily="@font/roboto_light"
+            android:text="Друзья"
+            android:layout_below="@id/group_title"
             android:textColor="@color/black"
+            android:fontFamily="@font/roboto_light"
             android:textSize="20sp"
-            android:layout_marginBottom="10dp"/>
+            android:paddingBottom="10dp"/>
 
-
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/group_title"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Группа"-->
-<!--            android:layout_marginStart="8dp"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="20sp"-->
-<!--            android:fontFamily="@font/roboto_medium"-->
-<!--            android:layout_below="@id/tv_worker"/>-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tv_group"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="8dp"-->
-<!--            android:text="123"-->
-<!--            android:layout_below="@id/group_title"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:fontFamily="@font/roboto_light"-->
-<!--            android:textSize="20sp"-->
-<!--            android:paddingBottom="10dp"/>-->
-
-        <ImageView
+        <Button
             android:layout_marginTop="16dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"
             android:id="@+id/done"
             android:background="@drawable/tick"/>
-
-        <ImageView
-            android:layout_marginTop="16dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+        <Button
+            android:id="@+id/redact"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/redact"
             android:layout_alignParentRight="true"
             android:layout_marginRight="70dp"
-            android:id="@+id/change"
-            android:background="@drawable/redact"/>
+            android:layout_marginTop="16dp"/>
 
 
     </RelativeLayout>
+
+
+
+
+
+
+
+
 
 
 

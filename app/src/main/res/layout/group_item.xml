@@ -17,43 +17,30 @@
 
         <TextView
             android:id="@+id/title_group"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_centerVertical="true"
             android:fontFamily="@font/roboto_medium"
             android:text="ItCompany"
             android:textColor="@color/black"
+            android:padding="16dp"
             android:textSize="25sp" />
 
 
-        <TextView
-            android:id="@+id/title_mates"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/title_group"
-            android:text="Участники"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="8dp"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
-      <ListView
-          android:id="@+id/lv_groupers"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_below="@id/title_mates"
-          android:layout_marginStart="16dp"/>
 
 
-        <ImageView
+
+        <Button
             android:layout_marginTop="16dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"
-            android:id="@+id/radact"
-            android:background="@drawable/redact"/>
+            android:id="@+id/info"
+            android:background="@drawable/info"
+            android:layout_centerVertical="true"/>
 
 
 

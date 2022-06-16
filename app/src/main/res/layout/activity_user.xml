@@ -13,7 +13,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/back_btn"/>
+        android:background="@drawable/back_btn" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -48,8 +48,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/et_change_data"
-                android:layout_marginTop="40dp"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
                 android:fontFamily="@font/roboto_light"
                 android:text="Получить ID"
                 android:textColor="@color/black"
@@ -70,12 +70,12 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_id"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-               android:layout_marginStart="20dp"
                 android:fontFamily="@font/roboto_light"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:text=""/>
+                android:textSize="18sp" />
 
 
             <ImageButton

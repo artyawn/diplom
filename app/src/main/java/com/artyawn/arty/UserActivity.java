@@ -7,22 +7,22 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.artyawn.arty.CreateGroup.NewGroup;
+import com.artyawn.arty.login.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class UserActivity extends AppCompatActivity {
 
-    private TextView  id;
-    private ImageView btn_get_id;
+    private TextView  tv_id;
+    private ImageView btn_get_id, back_btn;
     private ImageButton logout_btn;
     private FirebaseAuth mAuth;
+    private EditText id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +32,25 @@ public class UserActivity extends AppCompatActivity {
         btn_get_id = findViewById(R.id.btn_get_id);
         id = findViewById(R.id.et_id);
         logout_btn = findViewById(R.id.logout_btn);
+        back_btn = findViewById(R.id.back_btn);
         mAuth = FirebaseAuth.getInstance();
+        tv_id = findViewById(R.id.tv_id);
         String user = mAuth.getUid();
 
 
 
+        tv_id.setOnClickListener(view -> {
+            id.setText(user);
 
-//        create_new_group.setOnClickListener(view -> {
-//            Intent intent = new Intent(UserActivity.this, NewGroup.class);
-//            startActivity(intent);
-//        });
+        });
+
+
+
+        back_btn.setOnClickListener(view -> {
+            Intent intent = new Intent(UserActivity.this, FirstActivity.class);
+            startActivity(intent);
+        });
+
 
         btn_get_id.setOnClickListener(view -> {
                 id.setText(user);
@@ -58,10 +67,7 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
-//        my_groups.setOnClickListener(view -> {
-//            Intent intent=new Intent(UserActivity.this, MyGroupsActivity.class);
-//            startActivity(intent);
-//        });
+
 
 
 

@@ -10,13 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arty">
         <activity
-            android:name=".MatesGroupsActivity"
+            android:name=".GroupsMate.TasksGr"
+            android:exported="false" />
+        <activity
+            android:name=".GroupsMate.UsersGr"
+            android:exported="false" />
+        <activity
+            android:name=".GroupsAdmin.GroupsTasksFor"
+            android:exported="false" />
+        <activity
+            android:name=".GroupsAdmin.GroupsAdminUsers"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityMatesGroups.MatesGroupsActivity"
             android:exported="false" />
         <activity
             android:name=".ActivityTaskFor.MatesTasksActivity"
             android:exported="true" />
         <activity
-            android:name=".MyGroupsActivity"
+            android:name=".ActivityMyGroups.MyGroupsActivity"
             android:exported="true" />
         <activity
             android:name=".CreateGroup.NewGroup"
@@ -31,13 +43,13 @@
             android:name=".UserActivity"
             android:exported="true" />
         <activity
+            android:name=".login.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.RegisterActivity"
+            android:exported="true" />
+        <activity
             android:name=".FirstActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="true" />
-        <activity
-            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

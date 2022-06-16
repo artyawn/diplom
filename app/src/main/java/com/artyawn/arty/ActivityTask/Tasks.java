@@ -26,7 +26,7 @@ private RecyclerView recyclerView;
         DatabaseReference myRef;
         String mAuth;
         TextView tasks_mates;
-        ImageView btn_back, done;
+        ImageView btn_back;
 
 
 @Override
@@ -42,8 +42,6 @@ protected void onCreate(Bundle savedInstanceState)
         myRef = FirebaseDatabase.getInstance().getReference().child("users").child(mAuth).child("tasks");
 
         recyclerView = findViewById(R.id.tasksList);
-
-
         recyclerView.setLayoutManager(
         new LinearLayoutManager(this));
 
@@ -61,12 +59,10 @@ protected void onCreate(Bundle savedInstanceState)
                 startActivity(intent);
         });
 
-                btn_back.setOnClickListener(view -> {
+        btn_back.setOnClickListener(view -> {
                         Intent intent = new Intent(Tasks.this, FirstActivity.class);
                         startActivity(intent);
                 });
-
-
 
         }
 

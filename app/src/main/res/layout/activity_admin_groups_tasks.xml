@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".ActivityMyGroups.MyGroupsActivity">
+    tools:context=".GroupsAdmin.GroupsTasksFor">
 
     <ImageView
-        android:id="@+id/back_btn_groups"
+        android:id="@+id/back_to_groups"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
@@ -16,38 +15,38 @@
         android:background="@drawable/back_btn"/>
 
     <TextView
-        android:id="@+id/my_groups"
+        android:id="@+id/usersGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Админ"
-        android:textSize="25sp"
+        android:text="Участники"
+        android:textSize="18sp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="100dp"
         android:textColor="@color/white"
         android:fontFamily="@font/roboto_light"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/groupsList"
+        android:id="@+id/groupsTasksList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/my_groups"
+        android:layout_below="@id/usersGroup"
         android:layout_marginTop="30dp"
-        />
+         />
 
 
     <TextView
-        android:id="@+id/groups_mates"
+        android:id="@+id/groups_tasks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Участник"
+        android:text="Задачи "
         android:textColor="@color/white_hint"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="100dp"
-        android:textSize="18dp"
+        android:layout_marginTop="90dp"
+        android:textSize="25sp"
         android:fontFamily="@font/roboto_light"/>
     <ImageButton
-        android:id="@+id/cr_new_gr"
+        android:id="@+id/add_task_for_group"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@drawable/add_new"

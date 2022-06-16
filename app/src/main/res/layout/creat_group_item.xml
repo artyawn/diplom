@@ -5,14 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="12dp"
     app:cardCornerRadius="8dp"
-    android:layout_marginBottom="16dp"
-    app:contentPadding="10dp">
+    android:layout_marginBottom="16dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
     <TextView
         android:id="@+id/email_create_group"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -20,11 +21,22 @@
         android:textSize="20dp"
         android:fontFamily="@font/roboto_light"/>
 
-        <ImageView
+        <TextView
+            android:layout_below="@id/email_create_group"
+            android:layout_marginTop="2dp"
+            android:id="@+id/id_create_group"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="2dp"
+            android:fontFamily="@font/roboto_light"/>
+
+        <Button
             android:layout_centerVertical="true"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
             android:id="@+id/remove"
             android:background="@drawable/remove"/>
     </RelativeLayout>

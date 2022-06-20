@@ -9,10 +9,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.artyawn.arty.ActivityMyGroups.GroupAdapter;
 import com.artyawn.arty.ActivityMyGroups.MyGroupsActivity;
-import com.artyawn.arty.FirstActivity;
-import com.artyawn.arty.GroupClass;
+import com.artyawn.arty.FirstAcrivity.FirstActivity;
+import com.artyawn.arty.DataClasses.GroupClass;
 import com.artyawn.arty.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;

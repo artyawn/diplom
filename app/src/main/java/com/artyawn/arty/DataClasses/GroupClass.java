@@ -1,4 +1,4 @@
-package com.artyawn.arty;
+package com.artyawn.arty.DataClasses;
 
 import java.util.ArrayList;
 import java.util.List;

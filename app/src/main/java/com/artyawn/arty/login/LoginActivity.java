@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.artyawn.arty.FirstActivity;
+import com.artyawn.arty.FirstAcrivity.FirstActivity;
 import com.artyawn.arty.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

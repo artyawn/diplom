@@ -61,6 +61,13 @@ public class TaskAdapter extends FirebaseRecyclerAdapter<CreateTaskClass, TaskAd
                             map.put("status","Выполнено");
                             FirebaseDatabase.getInstance().getReference().child("users").child(id).child("tasks").child(model.getTask_name()).removeValue();
                             FirebaseDatabase.getInstance().getReference().child("users").child(model.getSender_id()).child("tasks_for").child(model.getTask_name()).updateChildren(map);
+                            FirebaseDatabase.getInstance().getReference()
+                                    .child("users")
+                                    .child(id)
+                                    .child("groups_tasks")
+                                    .child(model.getTask_name())
+                                    .removeValue();
+                            FirebaseDatabase.getInstance().getReference().child("users").child(model.getSender_id()).child("groups_tasks_for").child(model.getTask_name()).updateChildren(map);
                         }
                     });
 

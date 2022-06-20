@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.artyawn.arty.CreateGroup.NewGroup;
-import com.artyawn.arty.FirstActivity;
-import com.artyawn.arty.GroupClass;
+import com.artyawn.arty.FirstAcrivity.FirstActivity;
+import com.artyawn.arty.DataClasses.GroupClass;
 import com.artyawn.arty.ActivityMatesGroups.MatesGroupsActivity;
 import com.artyawn.arty.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

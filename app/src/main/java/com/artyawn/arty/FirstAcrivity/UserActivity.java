@@ -1,4 +1,4 @@
-package com.artyawn.arty;
+package com.artyawn.arty.FirstAcrivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.artyawn.arty.R;
 import com.artyawn.arty.login.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 

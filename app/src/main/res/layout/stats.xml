@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".ActivityTask.Tasks">
+    tools:context=".StatsAdmin.Stats">
 
     <ImageView
-        android:id="@+id/back_btn"
+        android:id="@+id/back_btn_from_stats"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
@@ -39,124 +39,166 @@
         android:textSize="18dp"
         android:fontFamily="@font/roboto_light"/>
 
-    <androidx.cardview.widget.CardView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/stats_mates"
-        app:cardCornerRadius="12dp"
-        android:elevation="12dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="140dp">
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/my_stat_card"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/tasks_done"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Заданий выполнено"
-            android:fontFamily="@font/roboto_light"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="16dp"
-            />
+            android:layout_below="@id/stats_mates"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="12dp"
+            app:cardCornerRadius="12dp">
 
-            <TextView
-                android:id="@+id/stat1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2"
-                android:textColor="#E05777"
-                android:layout_marginStart="350dp"
-                android:fontFamily="@font/roboto_bold"
-                android:textSize="35dp"
-                android:layout_marginTop="16dp"/>
-<LinearLayout
-    android:id="@+id/ll_activ_group"
-    android:layout_width="200dp"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/stat1"
-    android:layout_marginTop="16dp"
-    android:layout_marginStart="16dp">
-
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/roboto_light"
-                android:text="Самая активная группа"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-</LinearLayout>
-            <TextView
-                android:id="@+id/stat2"
-                android:layout_below="@id/stat1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="Друзья"
-                android:textColor="#E05777"
-                android:fontFamily="@font/roboto_bold"
-                android:textSize="25dp"
-                android:layout_marginTop="16dp"/>
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/join_group"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Принято участие в группах"
-                android:layout_below="@id/ll_activ_group"
-                android:fontFamily="@font/roboto_light"
-                android:textSize="20dp"
-                android:textColor="@color/black"
-                android:layout_marginTop="16dp"
-                />
-
-            <TextView
-                android:id="@+id/stat3"
-                android:layout_below="@id/ll_activ_group"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2"
-                android:layout_marginStart="350dp"
-                android:fontFamily="@font/roboto_bold"
-                android:textSize="35dp"
-                android:textColor="#E05777"
-                android:layout_marginTop="16dp"/>
+                <TextView
+                    android:id="@+id/tasks_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Общая статиcтика"
+                    android:textColor="@color/black"
+                    android:textSize="25dp" />
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Выполнено личных заданий"
-                android:layout_below="@id/stat3"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/roboto_light"
-                android:textSize="20dp"
-                android:textColor="@color/black"
-                />
+                <LinearLayout
+                    android:id="@+id/ll_activ_group"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tasks_done"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp">
 
-            <TextView
-                android:id="@+id/stat4"
-                android:layout_below="@id/stat3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:layout_marginStart="350dp"
-                android:fontFamily="@font/roboto_bold"
-                android:textSize="35dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:textColor="#E05777"/>
 
-</RelativeLayout>
-    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Выполнено задач"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/stat2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tasks_done"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="12"
+                    android:textColor="#E05777"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/join_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_activ_group"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="Пропущено задач"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/stat3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_activ_group"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="2"
+                    android:textColor="#E05777"
+                    android:textSize="25dp" />
+
+
+                <TextView
+                    android:id="@+id/groups_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/work_proc"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="Участие в группах"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+
+                <TextView
+                    android:id="@+id/work_proc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stat3"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="Общая работоспособность"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/stat4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stat3"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0"
+                    android:textColor="#E05777"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/stat5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stat4"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0"
+                    android:textColor="#E05777"
+                    android:textSize="25dp" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pie_chart1"
+            android:layout_marginTop="1000dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.github.mikephil.charting.charts.PieChart>
+
+
+
+    </ScrollView>
 
 
 

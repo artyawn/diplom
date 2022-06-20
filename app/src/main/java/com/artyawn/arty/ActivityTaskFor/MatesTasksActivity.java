@@ -7,12 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.artyawn.arty.ActivityTask.TaskAdapter;
 import com.artyawn.arty.ActivityTask.Tasks;
-import com.artyawn.arty.CreateTask;
+import com.artyawn.arty.CreateTask.CreateTask;
 import com.artyawn.arty.CreateTaskClass;
 import com.artyawn.arty.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

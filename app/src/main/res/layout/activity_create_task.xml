@@ -5,142 +5,144 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient_background"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".CreateTask">
+    tools:context=".CreateTask.CreateTask">
 
 
-    <ImageView
-        android:id="@+id/back_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/back_btn"/>
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="16dp"
-        android:clickable="true"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="12dp">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/back_btn" />
 
-
-
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <EditText
-                android:id="@+id/et_new_task"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/roboto_light"
-                android:gravity="center"
-                android:hint="Название"
-                android:textColorHint="@color/hint"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/date"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/et_new_task"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/roboto_light"
-                android:hint="дата"
-                android:textColorHint="@color/hint"
-                android:textSize="20dp" />
-
-            <ImageButton
-                android:id="@+id/pick_date"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/picker"
-                android:layout_below="@id/et_new_task"
-                android:layout_marginTop="60dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"
-                />
-
-    <EditText
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/date"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/roboto_light"
-        android:hint="описание"
-        android:textSize="20dp"
-        android:textColorHint="@color/hint"
-        android:id="@+id/description"/>
-
-    <EditText
-        android:layout_below="@id/description"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/roboto_light"
-        android:textColorHint="@color/hint"
-        android:hint="группа"
-        android:textSize="20dp"
-        android:id="@+id/et_group"/>
-
-            <ImageButton
-                android:id="@+id/pick_group"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_below="@id/description"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/picker" />
-
-            <EditText
-                android:id="@+id/worker"
-                android:layout_width="280dp"
-                android:layout_height="50dp"
-                android:layout_below="@id/et_group"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/roboto_light"
-                android:hint="исполнитель"
-                android:textColorHint="@color/hint"
-                android:textSize="20dp" />
-
-            <ImageButton
-                android:id="@+id/pick_worker"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/picker"
-                android:layout_below="@id/et_group"
-                android:layout_marginTop="20dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"/>
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp">
 
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <ImageButton
-                android:id="@+id/btn_new_task"
-                android:layout_width="140dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="143dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/create"
-                android:layout_centerHorizontal="true"
-                android:text="создать"
-                android:textAllCaps="false"
-                android:textSize="15dp"
-                android:textStyle="normal" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+                <EditText
+                    android:id="@+id/et_new_task"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:gravity="center"
+                    android:hint="Название"
+                    android:textColorHint="@color/hint"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_new_task"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:hint="дата"
+                    android:textColorHint="@color/hint"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/pick_date"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/et_new_task"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/picker" />
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:hint="описание"
+                    android:textColorHint="@color/hint"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/et_group"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/description"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:hint="группа"
+                    android:textColorHint="@color/hint"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/pick_group"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/description"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/picker" />
+
+                <EditText
+                    android:id="@+id/worker"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/et_group"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:hint="исполнитель"
+                    android:textColorHint="@color/hint"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/pick_worker"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/et_group"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/picker" />
+
+
+                <ImageButton
+                    android:id="@+id/btn_new_task"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/worker"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="143dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/create"
+                    android:text="создать"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+<!--    </ScrollView>-->
 
 </RelativeLayout>

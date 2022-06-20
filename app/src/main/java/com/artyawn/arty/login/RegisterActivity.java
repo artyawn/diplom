@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.artyawn.arty.FirstActivity;
+import com.artyawn.arty.FirstAcrivity.FirstActivity;
 import com.artyawn.arty.R;
-import com.artyawn.arty.UserClass;
+import com.artyawn.arty.DataClasses.UserClass;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

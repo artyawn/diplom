@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.artyawn.arty.ActivityMyGroups.MyGroupsActivity;
 import com.artyawn.arty.ActivityTaskFor.TaskForAdapter;
-import com.artyawn.arty.CreateTask;
+import com.artyawn.arty.CreateTask.CreateTask;
 import com.artyawn.arty.CreateTaskClass;
 import com.artyawn.arty.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

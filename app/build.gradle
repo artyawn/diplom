@@ -44,6 +44,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.firebaseui:firebase-ui-database:8.0.1'
     implementation 'com.google.firebase:firebase-database'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
 
 

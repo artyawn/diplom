@@ -1,4 +1,4 @@
-package com.artyawn.arty;
+package com.artyawn.arty.DataClasses;
 
 public class UserClass {
     public String email, id;

@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 
 import com.artyawn.arty.CreateTaskClass;
-import com.artyawn.arty.FirstActivity;
+import com.artyawn.arty.FirstAcrivity.FirstActivity;
 import com.artyawn.arty.ActivityTaskFor.MatesTasksActivity;
 import com.artyawn.arty.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -39,7 +39,10 @@ protected void onCreate(Bundle savedInstanceState)
 
 
         mAuth = FirebaseAuth.getInstance().getUid();
-        myRef = FirebaseDatabase.getInstance().getReference().child("users").child(mAuth).child("tasks");
+        myRef = FirebaseDatabase.getInstance().getReference().
+                child("users").
+                child(mAuth).
+                child("tasks");
 
         recyclerView = findViewById(R.id.tasksList);
         recyclerView.setLayoutManager(

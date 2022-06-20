@@ -143,13 +143,13 @@
             android:paddingBottom="10dp"/>
 
         <Button
-            android:layout_marginTop="16dp"
+            android:id="@+id/done"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
-            android:id="@+id/done"
-            android:background="@drawable/tick"/>
+            android:background="@drawable/tick" />
         <Button
             android:id="@+id/redact"
             android:layout_width="40dp"

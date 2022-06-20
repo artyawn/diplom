@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arty">
         <activity
+            android:name=".GroupPicker"
+            android:exported="false" />
+        <activity
+            android:name=".StatsAdmin.Stats"
+            android:exported="false" />
+        <activity
+            android:name=".PieChartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityTaskFor.RedactTaskActivity"
+            android:exported="false" />
+        <activity
             android:name=".GroupsMate.TasksGr"
             android:exported="false" />
         <activity
@@ -34,22 +46,22 @@
             android:name=".CreateGroup.NewGroup"
             android:exported="true" />
         <activity
-            android:name=".CreateTask"
+            android:name=".CreateTask.CreateTask"
             android:exported="true" />
         <activity
             android:name=".ActivityTask.Tasks"
             android:exported="true" />
         <activity
-            android:name=".UserActivity"
+            android:name=".FirstAcrivity.UserActivity"
             android:exported="true" />
         <activity
-            android:name=".login.LoginActivity"
+            android:name=".FirstAcrivity.FirstActivity"
             android:exported="true" />
         <activity
             android:name=".login.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".FirstActivity"
+            android:name=".login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

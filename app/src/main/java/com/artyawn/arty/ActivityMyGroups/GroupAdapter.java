@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.artyawn.arty.GroupClass;
+import com.artyawn.arty.DataClasses.GroupClass;
 import com.artyawn.arty.GroupsAdmin.GroupsAdminUsers;
 import com.artyawn.arty.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
